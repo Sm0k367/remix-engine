@@ -1,26 +1,29 @@
 # ===== .gitignore =====
 
-# Node
+# Node modules
 node_modules/
+
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Env
+# Environment variables
 .env
 
-# OS
+# Build output
+dist/
+build/
+
+# OS files
 .DS_Store
 Thumbs.db
 
-# Logs
-logs
-*.log
-
-# Editor
+# Editor folders
 .vscode/
 .idea/
 
-# Build
-dist/
-build/
+# Vite cache
+.client/
