@@ -1,4 +1,4 @@
-// ===== AI Remix Engine Server =====
+// ===== AI Remix Engine Server Entry =====
 
 const express = require('express');
 const cors = require('cors');
@@ -17,12 +17,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Health check
 app.get('/', (req, res) => {
-  res.send('🎨 AI Remix Engine is alive.');
+  res.send('🎨 AI Remix Engine is running.');
 });
 
 // Remix API
 app.use('/api/remix', remixRoutes);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Remix Engine running at http://localhost:${PORT}`);
+  console.log(`🚀 Remix Engine backend running at http://localhost:${PORT}`);
 });
