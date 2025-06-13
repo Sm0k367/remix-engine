@@ -1,8 +1,8 @@
 {
-  "name": "remix-ui",
+  "name": "remix-client",
   "version": "0.1.0",
   "private": true,
-  "description": "Frontend for AI Remix Engine – multi-modal remixing interface",
+  "description": "Frontend for AI Remix Engine — multi-modal remixing interface",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
