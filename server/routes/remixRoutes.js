@@ -2,7 +2,12 @@
 
 const express = require('express');
 const router = express.Router();
-const { remixText, remixImage, remixMusic, remixVideo } = require('../services/remixService');
+const {
+  remixText,
+  remixImage,
+  remixMusic,
+  remixVideo
+} = require('../services/remixService');
 
 // POST /api/remix/text
 router.post('/text', async (req, res) => {
@@ -20,8 +25,8 @@ router.post('/text', async (req, res) => {
 router.post('/image', async (req, res) => {
   try {
     const { imageUrl, style } = req.body;
-    const outputUrl = await remixImage(imageUrl, style);
-    res.json({ success: true, output: outputUrl });
+    const output = await remixImage(imageUrl, style);
+    res.json({ success: true, output });
   } catch (err) {
     console.error('Image remix error:', err);
     res.status(500).json({ error: 'Failed to remix image.' });
@@ -32,8 +37,8 @@ router.post('/image', async (req, res) => {
 router.post('/music', async (req, res) => {
   try {
     const { inputPrompt, genre } = req.body;
-    const trackUrl = await remixMusic(inputPrompt, genre);
-    res.json({ success: true, output: trackUrl });
+    const output = await remixMusic(inputPrompt, genre);
+    res.json({ success: true, output });
   } catch (err) {
     console.error('Music remix error:', err);
     res.status(500).json({ error: 'Failed to remix music.' });
@@ -44,8 +49,8 @@ router.post('/music', async (req, res) => {
 router.post('/video', async (req, res) => {
   try {
     const { videoUrl, effect } = req.body;
-    const resultUrl = await remixVideo(videoUrl, effect);
-    res.json({ success: true, output: resultUrl });
+    const output = await remixVideo(videoUrl, effect);
+    res.json({ success: true, output });
   } catch (err) {
     console.error('Video remix error:', err);
     res.status(500).json({ error: 'Failed to remix video.' });
