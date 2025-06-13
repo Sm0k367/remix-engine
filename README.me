@@ -1,0 +1,35 @@
+# 🎨 AI Remix Engine™
+
+The AI Remix Engine™ transforms any input — text, image, music, or video — into a new version in a different **style**, **mood**, or **format** using state-of-the-art generative AI.
+
+---
+
+## ✨ Features
+
+- 📝 Text → Poem, Rap, Ad Copy, Haiku
+- 🖼️ Image → Anime, Cyberpunk, Watercolor, Glitch
+- 🎵 Music → Lo-Fi, Trap, Cinematic, Ambient
+- 🎥 Video → VHS, Glitchcore, Stylized, Anime
+
+---
+
+## 🧠 Powered By
+
+| Modality | Model Stack |
+|----------|-------------|
+| Text     | GPT-4, Claude, Mistral |
+| Image    | Stable Diffusion, ControlNet |
+| Music    | Suno, Udio, AudioLDM |
+| Video    | RunwayML, Pika Labs, SVD |
+
+---
+
+## 🧩 Remix Presets
+
+Presets are stored in `/remix-presets/` and define how each style transforms the input.
+
+```yaml
+name: cyberpunk
+type: image
+prompt: "neon lights, futuristic city, dark synth aesthetic"
+model: stable-diffusion-xl
